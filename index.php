@@ -20,9 +20,10 @@
 <?php
 
 $thisdate = date('Y-m-d');
-
+$monthdays = cal_days_in_month(CAL_GREGORIAN, date('m') , date('Y'));
 if(isset($_POST['button1'])) {
     $thisdate = date('Y-m-d', strtotime($thisdate. "- 1 months"));
+    $monthdays = cal_days_in_month(CAL_GREGORIAN, date('m') , date('Y'));
 }
 else if(isset($_POST['button2'])) {
     $thisdate = $thisdate;
@@ -31,7 +32,6 @@ else if(isset($_POST['button3'])) {
     $thisdate = date('Y-m-d', strtotime($thisdate. "+ 1 months"));
 }
  
-$monthdays = cal_days_in_month(CAL_GREGORIAN, date('m') , date('Y'));
 
 ob_start();
 $eldiv = '<table id="rep"> ';
