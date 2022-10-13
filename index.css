@@ -21,13 +21,7 @@ table{
     background-color:white;
     box-shadow:1px 0px 5px 5px orangered;
 }
-.monthheader{
-    margin-right:100%;
-    margin-bottom:5%;
-    margin-left:10%;
-    display:inline-block;
-    background-color:white;
-}
+
 .monw{
     background-color:white;
     display:inline-block;
@@ -40,6 +34,13 @@ td{
     background-color:white;
     display:block;
     text-align:center;
+}
+.monthheader{
+    margin-right:100%;
+    margin-bottom:5%;
+    margin-left:10%;
+    display:inline-block;
+    background-color:white;
 }
 th{
     background-color:white; 
