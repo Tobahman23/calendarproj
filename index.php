@@ -14,13 +14,9 @@
     <input id="name" name="name" type="text"/>
     <input type="submit" name="subm" value="Done"/>
     </form>
-
 <?php
-echo `whoami`;
-error_reporting(E_ALL); 
-ini_set('display_errors','1'); 
+
 include 'namnsdag.php';
-include 'birthdays.txt';
 $thisd = $_GET['date'] ?? date('Y-m-d');
 
 $thisdate=date($thisd); 
@@ -28,7 +24,7 @@ $thisdate=date($thisd);
 $thisdatum = strtotime($thisdate);
 
 $monthdays = cal_days_in_month(CAL_GREGORIAN, date('m', strtotime($thisdate)) , date('Y', strtotime($thisdate)));
-$image = '<img src="spooky.webp" alt="spooky">';
+$image = '<img src="images/spooky.webp" alt="spooky">';
 
  $prevmonth = date('Y-m-01', strtotime("-1 month", $thisdatum));
  $nextmonth = date('Y-m-01', strtotime("+1 month", $thisdatum));
@@ -76,50 +72,50 @@ else{
  $eldiv .= "</tr>";
 if($months == "Oct")
 {
-    $image = '<img src="spooky.webp" alt="october">';
+    $image = '<img src="images/spooky.webp" alt="october">';
 }
 else if($months == "Nov")
 {
-    $image = '<img src="november.jpeg" alt="november">';
+    $image = '<img src="images/november.jpeg" alt="november">';
 }
 else if($months == "Dec")
 {
-    $image = '<img src="december.jpeg" alt="december">';
+    $image = '<img src="images/december.jpeg" alt="december">';
 }
 else if($months == "Jan")
 {
-    $image = '<img src="january.jpeg" alt="january">';
+    $image = '<img src="images/january.jpeg" alt="january">';
 }
 else if($months == "Feb")
 {
-    $image = '<img src="february.jpeg" alt="february">';
+    $image = '<img src="images/february.jpeg" alt="february">';
 }
 else if($months == "Mar")
 {
-    $image = '<img src="march.jpeg" alt="march">';
+    $image = '<img src="images/march.jpeg" alt="march">';
 }
 else if($months == "Apr")
 {
-    $image = '<img src="april.jpeg" alt="april">';
+    $image = '<img src="images/april.jpeg" alt="april">';
 }
 else if($months == "May")
 {
-    $image = '<img src="may.jpeg" alt="may">';
+    $image = '<img src="images/may.jpeg" alt="may">';
 }
 else if($months == "Jun")
 {
-    $image = '<img src="june.jpeg" alt="june">';
+    $image = '<img src="images/june.jpeg" alt="june">';
 }
 else if($months == "Jul")
 {
-    $image = '<img src="july.jpeg" alt="july">';
+    $image = '<img src="images/july.jpeg" alt="july">';
 }
 else if($months == "Aug")
 {
-    $image = '<img src="august.jpeg" alt="august">';
+    $image = '<img src="images/august.jpeg" alt="august">';
 }
 else {
-    $image = '<img src="september.jpeg" alt="september">';
+    $image = '<img src="images/september.jpeg" alt="september">';
 }
 }
 $eldiv .= "</table>";
